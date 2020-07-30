@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap')
 
 $primary: #9700fd
+$gray-light: #dadada
+$gray-medium: #b3b3b3
 
 body
     font-family: 'Montserrat', sans
+
+.d-inline-block
+  display: inline-block
+  // border: 1px solid blue
     
 .modal
     max-width: 850px
@@ -11,30 +17,39 @@ body
 
     &__header
         padding: 37px 37.5px 27px 37.5px
+        border-bottom: 1px solid #f5f5f5
 
-.modal__title
-    font-size: 26px
-    letter-spacing: .5px
-    margin: 0 0 26px 0
+    &__title
+      font-size: 26px
+      letter-spacing: .5px
+      margin: 0 0 26px 0
+      font-weight: normal
 
-.modal__label
-    font-size: 13px
-    line-height: 21px
+    &__label
+        display: block
+        font-size: 13px
+        line-height: 21px
+        margin: 7px 0
 
 .segment-control
   display: inline-flex
   background: #fff
-  border: 1px solid #c0c0c0
+  border: 1px solid $gray-light
 
   & label
     flex: 1
-    padding: .5rem 1rem
+    padding: 7px 0
+    text-align: center
+    width: 62px
     position: relative
     cursor: pointer
     user-select: none
 
   & span
     position: relative
+    font-size: 13px
+    font-weight: 500
+    line-height: 21px
 
   & input
     visibility: hidden
@@ -42,7 +57,7 @@ body
 
   & input::after
     content: ""
-    background: #cc007a
+    background: $primary
 
   & input, & input::after
     position: absolute
@@ -53,3 +68,56 @@ body
 
   & input:checked
     visibility: visible
+
+    & + span
+      color: #fff
+
+.custom-select
+  position: relative
+  display: inline-block
+  width: 206px
+  margin-right: 12px
+
+  select
+    width: 100%
+    border: 1px solid $gray-light
+    padding: 7px 12px
+    line-height: 21px
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+    &:focus
+      outline: none
+      border: 1px solid rgba($primary, .3)
+    
+    &:hover
+      cursor: pointer
+    
+    &:disabled
+      background-color: #f5f5f5
+      color: #b3b3b3
+      
+
+  &:after
+    content: ""
+    position: absolute
+    right: 14px
+    width: 0
+    height: 0
+    border-left: 4.5px solid transparent
+    border-right: 4.5px solid transparent
+    border-top: 4.8px solid $gray-medium
+    pointer-events: none
+    top: 50%
+    transform: translate3d(0, -50%, 0)
+
+.separator
+  display: inline-block
+  width: 1px
+  height: 30px
+  background-color: #e2e7ee
+  margin: 0 21px
+  vertical-align: middle
+
+    
