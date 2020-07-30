@@ -1,65 +1,22 @@
-import React from 'react';
-import './App.sass';
+import React, { useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <div className="modal">
-          <div className="modal__header">
-            <h2 className="modal__title">Header Settings</h2>
-            <div className="d-inline-block">
-              <label className="modal__label">Size</label>
-              <div className="segment-control">
-                <label>
-                  <input type="radio" name="size" value="s" />
-                  <span>S</span>
-                </label>
-                <label>
-                  <input type="radio" name="size" value="m" />
-                  <span>M</span>
-                </label>
-                <label>
-                  <input type="radio" name="size" value="l" />
-                  <span>L</span>
-                </label>
-              </div>
-              <div className="separator"></div>
-            </div>
-            <div className="d-inline-block">
-              <label for="animation-select" className="modal__label">Animation</label>
-              <div className="custom-select">
-                <select name="animations" id="animation-select" >
-                    <option value="Fortune Wheel">Fortune Wheel</option>
-                    <option value="Fade">Fade</option>
-                </select>
-              </div>
-              <div className="custom-select">
-                <select name="duration" id="animation-duration" disabled>
-                    <option value="2">Auto 2 sec</option>
-                    <option value="0">Manual</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div className="modal__body">
-            <label className="modal__label">Tiles</label>
-            <div className="carousel-editor">
-              <div className="carousel-editor__header">
-                <span className="carousel-editor__heading">Subheader</span>
-                <span className="carousel-editor__heading">Heading</span>
-                <span className="carousel-editor__heading">Background</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-    </div>
-  );
+import { Modal } from './components/Modal/Modal';
+import { Popup } from './components/Popup/Popup';
+
+export function App() {
+    const [isModalOpen, setModalOpen] = useState(true);
+    const [isPopupOpen, setPopupOpen] = useState(false);
+    const [text, setText] = useState("");
+    return (
+        <>
+            <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+                asdasdasd
+            </Modal>
+            <Popup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)}>
+                {text}
+            </Popup>
+            <button onClick={() => setPopupOpen(true)}>Open Popup</button>
+            <input type="text" value={text} onChange={e => setText(e.target.value)} />
+        </>
+    )
 }
-
-export default App;
-
-
-
-
