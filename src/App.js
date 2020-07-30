@@ -28,21 +28,28 @@ function App() {
             </div>
             <div className="d-inline-block">
               <label for="animation-select" className="modal__label">Animation</label>
-
               <div className="custom-select">
                 <select name="animations" id="animation-select" >
                     <option value="Fortune Wheel">Fortune Wheel</option>
                     <option value="Fade">Fade</option>
                 </select>
               </div>
-
               <div className="custom-select">
                 <select name="duration" id="animation-duration" disabled>
                     <option value="2">Auto 2 sec</option>
                     <option value="0">Manual</option>
                 </select>
               </div>
-
+            </div>
+          </div>
+          <div className="modal__body">
+            <label className="modal__label">Tiles</label>
+            <div className="carousel-editor">
+              <div className="carousel-editor__header">
+                <span className="carousel-editor__heading">Subheader</span>
+                <span className="carousel-editor__heading">Heading</span>
+                <span className="carousel-editor__heading">Background</span>
+              </div>
             </div>
           </div>
         </div>
