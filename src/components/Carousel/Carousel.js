@@ -1,33 +1,57 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useReducer } from 'react';
 
 import './Carousel.sass';
 
-export function Carousel({ items, slideInterval = 2000 }) {
-  const [x, setX] = useState(0);
+function carouselReducer(state, action) {
+  switch (action.type) {
+    case 'go-left':
+      return state - 1;
+    case 'go-right':
+      return state + 1;
+    default:
+      return state;
+  }
+}
 
-  const goLeft = () => {
-    x === 0 ? setX(-100 * (items.length - 1)) : setX(x + 100);
-  };
-  const goRight = () => {
-    x === -100 * (items.length - 1) ? setX(0) : setX(x - 100);
-  };
+export function Carousel({ items, slideInterval = 2000 }) {
+  const m = items.length;
+  const [ x, dispatch ] = useReducer(carouselReducer, 0);
+  const goLeft = () => dispatch({ type: 'go-left' });
+  const goRight = () => dispatch({ type: 'go-right' });
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      goRight();
-    }, Math.max(slideInterval, 2000));
-    return () => clearInterval(interval);
-  }, []);
+    const handle = setTimeout(goRight, Math.max(slideInterval, 2000));
+    return () => clearTimeout(handle);
+  }, [x, slideInterval]);
+
+  let offset = x % m;
+  if (offset < 0) {
+    offset += m;
+  }
 
   return (
     <div className="carousel">
       {items.map((item, index) =>
-        <div className="carousel__slide" key={index} style={{ transform: `translateX(${x}%)`}} >
+        <div
+          key={index}
+          className="carousel__slide"
+          style={{ transform: `translate3d(${-offset * 100}%, 0, 0)` }}
+        >
           <span>{item}</span>
         </div>
       )}
-      <button className="carousel__button carousel__btn--right" onClick={goRight}>Right</button>
-      <button className="carousel__button carousel__btn--left" onClick={goLeft}>Left</button>
+      <button
+        className="carousel__button carousel__button--right"
+        onClick={goRight}
+      >
+        Right
+      </button>
+      <button
+        className="carousel__button carousel__button--left"
+        onClick={goLeft}
+      >
+        Left
+      </button>
     </div>
   )
 }
