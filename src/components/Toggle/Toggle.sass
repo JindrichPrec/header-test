@@ -1,0 +1,24 @@
+@import '../../variables'
+
+.toggle
+  position: relative
+  display: inline-block
+  width: 36px
+  height: 20px
+  background-color: #b3b3b3
+
+  &--checked
+    background-color: $primary
+
+  &--checked .toggle__slider
+    transform: translate3d(16px, 0, 0)
+
+  &__slider
+    position: absolute
+    left: 2px
+    bottom: 2px
+    height: 16px
+    width: 16px
+    background-color: #fff
+    border-radius: 1px
+    transition: transform 150ms ease-in-out
