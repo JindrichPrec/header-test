@@ -1,0 +1,81 @@
+@import '../../variables'
+
+.carousel-editor
+  border: 1px solid $gray-light
+  
+  &__header
+    padding: 16px 0
+    background-color: #f5f5f5
+    line-height: 12px
+  
+  &__heading
+    color: #808080
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-size: 10px
+    font-weight: 500
+
+
+.toggle-switch
+  position: relative
+  display: inline-block
+  width: 36px
+  height: 20px
+
+  input
+    width: 0
+    height: 0
+    visibility: hidden
+
+    &:checked + .slider
+      background-color: $primary
+
+    &:focus + .slider
+      box-shadow: 0 0 1px $primary
+
+    &:checked + .slider:before
+      transform: translate3d(16px, 0, 0)
+
+.slider
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #b3b3b3
+  border-radius: 2px
+  transition: background-color 150ms ease-in-out
+
+  &:before
+    content: ""
+    position: absolute
+    left: 2px
+    bottom: 2px
+    height: 16px
+    width: 16px
+    background-color: #fff
+    border-radius: 1px
+    transition: transform 150ms ease-in-out
+
+.more-dropdown
+  ul
+    display: inline-block
+    list-style: none
+    padding: 0
+    margin: 0
+    border: 1px solid orange
+
+  li
+    line-height: 37px
+
+    &:hover
+      background-color: $primary
+      cursor: pointer
+      color: #fff
+      
+      .more-dropdown__icon svg path
+        fill: #fff
+
+  &__icon
+    vertical-align: middle
