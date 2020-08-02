@@ -7,6 +7,7 @@ import { Carousel } from './components/Carousel/Carousel';
 import { Tiles } from './components/Tiles/Tiles';
 import { Dropdown} from './components/Dropdown/Dropdown';
 import { BackgroundDropdown } from './components/BackgroundDropdown/BackgroundDropdown';
+import { MultiSwitch } from './components/MultiSwitch/MultiSwitch';
 
 export function App() {
     const [isModalOpen, setModalOpen] = useState(true);
@@ -40,6 +41,11 @@ export function App() {
                 onChange={setSelectedIndex}
             />
             <BackgroundDropdown colors={colors} images={images} onChange={setSelection} selection={selection} />
+            <MultiSwitch 
+                options={['a', 'b', 'c']}
+                selectedIndex={selectedIndex}
+                onChange={setSelectedIndex}
+            />
         </>
     )
 }

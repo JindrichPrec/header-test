@@ -8,6 +8,7 @@ import { ReactComponent as DuplicateIcon } from '../../assets/svg/duplicate-icon
 import { ReactComponent as PlusIcon } from '../../assets/svg/plus-icon.svg';
 import { ReactComponent as DeleteIcon } from '../../assets/svg/trash-icon.svg';
 import { Popup } from '../Popup/Popup';
+import { Toggle } from '../Toggle/Toggle';
 
 export function TileItem({onDelete}) {
     const [isPopupOpen, setPopupOpen] = useState(false);
@@ -18,10 +19,7 @@ export function TileItem({onDelete}) {
             </span>
             <input className="custom-input" type="text" name="subheader" placeholder="Subheader"></input>
             <input className="custom-input" type="text" name="heading" placeholder="Heading"></input>
-            <label className="toggle-switch">
-            <input type="checkbox" />
-            <span className="slider"></span>
-            </label>
+            <Toggle />
             <button className="more-icon" onClick={() => setPopupOpen(true)}>
             <MoreIcon />
             </button>
