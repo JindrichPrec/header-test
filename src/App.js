@@ -28,7 +28,7 @@ export function App() {
             </Popup>
             <button onClick={() => setPopupOpen(true)}>Open Popup</button>
             <input type="text" value={text} onChange={e => setText(e.target.value)} />
-            <Carousel slideInterval={5000} />
+            <Carousel items={[ 1, 2, 3, 4, 5 ]} slideInterval={5000} />
             {/* <ul className="carousel-editor__body">
                 <TileItem />
             </ul> */}
