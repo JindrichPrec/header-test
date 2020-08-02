@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { Modal } from './components/Modal/Modal';
 import { Popup } from './components/Popup/Popup';
+import { Carousel } from './components/Carousel/Carousel';
 
 export function App() {
     const [isModalOpen, setModalOpen] = useState(true);
@@ -17,6 +18,7 @@ export function App() {
             </Popup>
             <button onClick={() => setPopupOpen(true)}>Open Popup</button>
             <input type="text" value={text} onChange={e => setText(e.target.value)} />
+            <Carousel />
         </>
     )
 }
