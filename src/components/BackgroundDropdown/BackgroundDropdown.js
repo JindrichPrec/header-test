@@ -8,6 +8,7 @@ export function BackgroundDropdown(props) {
   const [isPopupOpen, setPopupOpen] = useState(false);
   return (
     <DropdownBase
+      className="background-dropdown"
       dropdownContent={(<BackgroundDropdownContent {...props} onClose={() => setPopupOpen(false)} />)}
       buttonContent={(<BackgroundDropdownIcon {...props.selection} />)}
       isPopupOpen={isPopupOpen}

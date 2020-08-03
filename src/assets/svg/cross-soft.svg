@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>3026CB71-CE6A-41A7-8949-FF0997D00185</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M12.3079036,13.7054786 L8.00249719,9.40122301 L3.69209639,13.7094721 C3.30553128,14.0968426 2.67723811,14.0968426 2.29067299,13.7094721 C1.903109,13.3231 1.903109,12.6961188 2.29067299,12.3087483 L6.60007492,7.99950081 L2.29067299,3.69125172 C1.903109,3.30388119 1.903109,2.67690004 2.29067299,2.29052789 C2.67723811,1.90315737 3.30553128,1.90315737 3.69209639,2.29052789 L8.00249719,6.59877699 L12.3079036,2.2945214 C12.6944687,1.90715088 13.321763,1.90715088 13.709327,2.2945214 C14.0958921,2.68189193 14.0958921,3.30887308 13.709327,3.69524523 L9.40392059,8.00049919 L13.709327,12.3047548 C14.096891,12.6911269 14.096891,13.3191065 13.709327,13.7054786 C13.3227619,14.0918507 12.6944687,14.0918507 12.3079036,13.7054786 Z" id="path-1"></path>
+    </defs>
+    <g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/Small/Soft/cross_soft">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Error-Icon" fill="#232323" xlink:href="#path-1"></use>
+            <g id="UI/Color/Flat/Black" mask="url(#mask-2)" fill="#000000">
+                <g transform="translate(-35.000000, -35.000000)" id="Base">
+                    <rect x="0" y="0" width="86" height="86"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

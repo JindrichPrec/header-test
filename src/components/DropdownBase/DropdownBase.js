@@ -5,10 +5,10 @@ import { ReactComponent as ArrowIcon } from '../../assets/svg/arrow-down.svg';
 
 import './DropdownBase.sass';
 
-export function DropdownBase({ buttonContent, dropdownContent, isPopupOpen, setPopupOpen }) {
+export function DropdownBase({ buttonContent, dropdownContent, isPopupOpen, setPopupOpen, disabled, className }) {
   return (
-    <div className="dropdown">
-      <button className="dropdown__button" type="button" onClick={() => setPopupOpen(!isPopupOpen)}>
+    <div className={className}>
+      <button disabled={disabled} className="dropdown__button" type="button" onClick={() => setPopupOpen(!isPopupOpen)}>
         {buttonContent}
         <ArrowIcon />
       </button>

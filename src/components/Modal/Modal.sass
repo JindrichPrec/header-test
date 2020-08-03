@@ -1,0 +1,30 @@
+@import '../../_variables'
+
+.modal
+  position: absolute
+  width: 850px
+  top: 450px
+  left: 50%
+  transform: translate3d(-50%, 0, 0)
+  z-index: 2
+  background-color: #fff
+  box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.2)
+  margin-bottom: 300px
+
+  &__button
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.2)
+    background-color: #fff
+    border: none
+    position: absolute
+    right: -20px
+    top: -20px
+
+    &:hover
+      background-color: $primary
+      cursor: pointer
+      
+      svg g
+        fill: #fff

@@ -10,7 +10,7 @@ export function BackgroundDropdownIcon({ type, value, onClick }) {
       style = {backgroundColor: value};
       break;
     case 'image':
-      style = {backgroundImage: `url('${value}')`};
+      style = {backgroundImage: `url('${value.type}')`};
       break;
   }
   return (

@@ -1,0 +1,166 @@
+@import '../../variables'
+
+.tile-editor
+  &__header
+    padding: 37px 24px 27px 24px
+    border-bottom: 1px solid #f5f5f5
+
+  &__body
+    padding: 21px 24px 37.5px 24px
+
+  &__footer
+    padding: 15px 24px
+    background-color: #f5f5f5
+    text-align: right
+    
+  &__tiles-wrapper
+    margin-top: 12px
+
+  &__title
+    font-size: 26px
+    letter-spacing: .5px
+    margin: 0 0 26px 0
+
+  &__label
+      display: block
+      font-size: 13px
+      line-height: 21px
+      margin: 7px 0
+
+  &__subheader
+    padding: 16px 0
+    background-color: #f5f5f5
+    line-height: 12px
+  
+  &__heading
+    color: #808080
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-size: 10px
+    font-weight: bold
+
+  &__more
+    padding-top: 6px
+
+  &__add-button
+    float: right
+    margin: 7px 0
+    border: none
+    background: none
+    font-size: 13px
+    font-weight: bold
+
+    & svg
+      width: 16px
+      height: 16px
+      background-color: $primary
+      border-radius: 50%
+      padding: 3px
+      vertical-align: middle
+      margin-right: 12px
+
+    &:focus
+      outline: none
+    
+    &:hover
+      color: $primary
+      cursor: pointer
+
+  &__button
+    width: 140px
+    height: 40px
+    text-transform: uppercase
+    font-size: 11px
+    letter-spacing: 2px
+    background-color: $primary
+    color: #fff
+    border: none
+
+    &:hover
+      cursor: pointer
+
+  &__drag-icon
+    padding: 16px
+
+  &__item
+    border-bottom: 1px solid $gray-light
+    padding: 12px 0
+
+    &__popup-wrapper
+      display: inline-block
+      float: right
+      padding: 6px 12px
+
+    &__popup-open
+      border: none
+      background: none
+      font-size: 0
+      vertical-align: middle
+      padding: 12px 6px
+
+      &:hover
+        cursor: pointer
+      
+    & .popup
+      position: absolute
+
+  
+  &__column
+    display: inline-block
+
+    &--1
+      width: 57px
+      text-align: center
+
+    &--2
+      width: 164px
+      margin-right: 19px
+
+    &--3
+      width: 261px
+      margin-right: 19px
+
+    &--4
+      width: 60px
+      margin-right: 19px
+      text-align: center
+
+.separator
+  display: inline-block
+  width: 1px
+  height: 30px
+  background-color: #e2e7ee
+  margin: 0 21px
+  vertical-align: middle
+
+.more-dropdown
+  &__ul
+    display: inline-block
+    list-style: none
+    padding: 0
+    margin: 0
+    white-space: nowrap
+
+  &__button
+    position: relative
+    line-height: 37px
+    width: 100%
+    text-align: left
+    padding: 0 12px
+    border: none
+    background-color: #fff
+
+    svg
+      fill: $primary
+
+    &:hover
+      background-color: $primary
+      cursor: pointer
+      color: #fff
+      
+      svg path
+        fill: #fff
+
+  svg
+    vertical-align: middle
+    margin-right: 12px

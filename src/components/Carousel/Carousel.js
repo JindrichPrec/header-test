@@ -1,6 +1,8 @@
 import React, { useEffect, useReducer } from 'react';
 
 import './Carousel.sass';
+import {ReactComponent as ArrowThin } from '../../assets/svg/arrow-left-thin.svg';
+import { CarouselItem } from '../CarouselItem/CarouselItem';
 
 function carouselReducer(state, action) {
   switch (action.type) {
@@ -37,20 +39,25 @@ export function Carousel({ items, slideInterval = 2000 }) {
           className="carousel__slide"
           style={{ transform: `translate3d(${-offset * 100}%, 0, 0)` }}
         >
-          <span>{item}</span>
+          <CarouselItem 
+            heading={item.heading}
+            buttonText={item.buttonText}
+            buttonLink={item.buttonLink}
+            buttonTarget={item.buttonTarget} 
+          />
         </div>
       )}
       <button
         className="carousel__button carousel__button--right"
         onClick={goRight}
       >
-        Right
+        <ArrowThin />
       </button>
       <button
         className="carousel__button carousel__button--left"
         onClick={goLeft}
       >
-        Left
+        <ArrowThin />
       </button>
     </div>
   )

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Playfair+Display&display=swap');
+
+.carousel-item
+  display: inline-block
+  position: relative
+  text-align: left
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+  &__background
+    pointer-events: none
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: -1
+
+  &__wrapper
+    margin: 20vh 0 0 15vw
+
+  &__heading
+    position: relative
+    font-family: 'Playfair Display', serif
+    max-width: 351px
+    font-size: 50px
+    color: #fff
+    line-height: 60px
+
+    &::before
+      content: ""
+      position: absolute
+      display: inline-block
+      width: 179px
+      height: 3px
+      top: -10px
+      left: 0
+      background-color: #fff
+
+
+  &__button
+    text-align: center
+    display: inline-block
+    font-family: 'Lato', sans-serif
+    width: 194px
+    line-height: 50px
+    background-color: #fff
+    font-size: 11px
+    letter-spacing: 2px
+    color: #000
+    text-transform: uppercase
+    text-decoration: none
